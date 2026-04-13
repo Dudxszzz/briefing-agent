@@ -381,7 +381,7 @@ export default function BriefingAgent() {
     const res = await fetch("/api/claude", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: 1600, system: prompt, messages: msgs }),
+      body: JSON.stringify({ model: "claude-sonnet-4-5", max_tokens: 1600, system: prompt, messages: msgs }),
     });
     const data = await res.json();
     return data.content?.[0]?.text || "";
